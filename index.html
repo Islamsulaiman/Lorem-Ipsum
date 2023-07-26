@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Skills</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -25,6 +25,72 @@
             </div>
         </div>
     </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/assets/images/personal-image.jpeg" alt="personal image">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex ut necessitatibus tempora illo quis hic doloremque dicta sit accusamus magni distinctio eligendi, animi aspernatur eum autem accusantium delectus iure! Ut quaerat, est fugiat ex cupiditate eligendi sunt quis ducimus eos facilis id! Repellendus, consequatur. Eveniet optio suscipit voluptatem similique perferendis recusandae tempora explicabo quibusdam atque molestias nisi perspiciatis et ducimus dolorem repellendus itaque illo culpa, vel qui amet inventore veritatis!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Backend Development</span><br>Using technologies like Node.js and Ruby on Rails</li>
+                            <li><span>Frontend Development</span><br>Using technologies like React.js, HTML and CSS</li>
+                            <li><span>Additional Technologies</span><br>Docker, Git, CI/CD ,and more</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>experience</span><br>Using technologies like Node.js and Ruby on Rails</li>
+                            <li><span>experience</span><br>Using technologies like React.js, HTML and CSS</li>
+                            <li><span>Additional Technologies</span><br>Docker, Git, CI/CD ,and more</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>education</span><br>Using technologies like Node.js and Ruby on Rails</li>
+                            <li><span> education</span><br>Using technologies like React.js, HTML and CSS</li>
+                            <li><span>education</span><br>Docker, Git, CI/CD ,and more</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-content")
+
+        
+
+        function opentab(tabname) {
+
+            console.log(tablinks)
+
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
 </body>
 </html>
