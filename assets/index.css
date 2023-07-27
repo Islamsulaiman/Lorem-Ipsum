@@ -105,7 +105,21 @@ nav ul li a:hover::after{
     border-radius: 20px;
     overflow: hidden;
     flex-basis: 35%;
-    max-height: 700px;
+    max-height: 500px;
+    padding: 10px;
+
+}
+.about-col-1 img{
+    transition: background 0.5s, transform 0.5s;
+
+}
+
+.about-col-1 img:hover{
+    transition: 0.5s;
+}
+
+.about-col-1:hover{
+    border: 1px solid #fff;
 }
 
 .about-col-1 img{
@@ -259,9 +273,9 @@ nav ul li a:hover::after{
     font-size: 14px;
     transition: height 0.5s;
 }
-.layer h3{
+.layer h2{
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-size: 600;
 }
 
@@ -385,7 +399,10 @@ form .btn2{
 
 /* ------------------------------- css for small screen -------------------------- */
 
-nav ul .fas{
+nav ul .far{
+    display: none;
+}
+nav .fas{
     display: none;
 }
 
@@ -450,4 +467,10 @@ nav ul .fas{
     @media only screen and (max-width: 900px){
 
     }
+}
+
+
+
+.work img{
+    height: 50vh;
 }
