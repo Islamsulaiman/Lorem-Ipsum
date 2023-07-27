@@ -11,14 +11,15 @@
         <div class="container">
             <nav>
                 <img src="assets/images/logo.png" alt="logo" class="logo">
-                <ul>
-
+                <ul id="sidemenue">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="far fa-times-circle fa-lg" onclick="closemenue()"></i>
                 </ul>
+                <i class="fas fa-bars fa-lg" onclick="openmenue()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Engineer</p>
@@ -215,6 +216,18 @@
             event.currentTarget.classList.add("active-link")
             document.getElementById(tabname).classList.add("active-tab")
         }
+    </script>
+
+    <script>
+        var sidemenue = document.getElementById("sidemenue")
+
+        function openmenue(){
+            sidemenue.style.right = "0"
+        }
+        function closemenue(){
+            sidemenue.style.right = "-200px"
+        }
+
     </script>
 
 </body>
